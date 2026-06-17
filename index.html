@@ -124,13 +124,20 @@
             <h2 class="text-4xl font-bold mb-6">¿Tienes un reto complejo? <br>Nosotros tenemos la solución.</h2>
             <p class="text-gray-400 mb-10 text-lg">Cuéntanos sobre los cuellos de botella en tu empresa, institución o municipio. En TlamaTI diseñamos la tecnología para resolverlos.</p>
             
-            <form class="space-y-4 text-left">
+            <form action="https://formsubmit.co/tlamati@klinik-ia.com" method="POST" class="space-y-4 text-left">
+                
+                <input type="hidden" name="_subject" value="¡Nuevo Lead o Mensaje desde TlamaTI.pro!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://tlamati.pro/gracias.html">
+                
                 <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Tu Nombre" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500">
-                    <input type="text" placeholder="Empresa / Institución" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500">
+                    <input type="text" name="Nombre" placeholder="Tu Nombre" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500">
+                    <input type="text" name="Empresa" placeholder="Empresa / Institución" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500">
                 </div>
-                <input type="email" placeholder="Correo Electrónico" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500">
-                <textarea rows="4" placeholder="Cuéntanos tu reto..." class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500"></textarea>
+                <input type="email" name="Correo" placeholder="Correo Electrónico" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500">
+                <textarea name="Mensaje" rows="4" placeholder="Cuéntanos tu reto..." required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500"></textarea>
+                
                 <button type="submit" class="w-full bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 rounded-lg transition glow-button">
                     Enviar Mensaje
                 </button>
