@@ -33,8 +33,12 @@
     </nav>
 
     <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 z-0">
-            </div>
+        
+        <video id="bg-video" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="assets/spot_tlamati.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-gray-900/60 z-0"></div>
         
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
@@ -43,12 +47,20 @@
             <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light">
                 TlamaTI: <i class="text-white font-medium">El que sabe de soluciones.</i>
             </p>
+            
             <a href="#sigac" class="bg-sky-500 hover:bg-sky-400 text-white px-8 py-4 rounded-full text-lg font-bold transition glow-button inline-block">
                 Conoce nuestro trabajo
             </a>
+
+            <button onclick="toggleMute()" class="mt-8 mx-auto flex items-center justify-center gap-2 text-sm text-gray-300 hover:text-white transition bg-gray-800/50 hover:bg-gray-700/80 px-5 py-2 rounded-full backdrop-blur-md border border-gray-600">
+                <svg id="mute-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+                </svg>
+                <span id="mute-text">Activar Sonido</span>
+            </button>
         </div>
     </section>
-
     <section id="somos" class="py-24 bg-gray-900">
         <div class="max-w-4xl mx-auto text-center px-4">
             <h2 class="text-3xl font-bold text-sky-400 mb-6">Desarrollamos el futuro de tu organización</h2>
